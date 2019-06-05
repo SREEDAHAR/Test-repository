@@ -1,0 +1,63 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Git-Checkout') {
+            steps {
+                echo "Checking out from Git Repo!!" ; 
+                git 'https://github.com/simplilearn-github/Pipeline_Script.git'
+            }
+        }
+		
+		stage('Build') {
+            steps {
+                echo "Building  the checked-out project!!";
+                bat 'Build.bat'
+            }
+        }
+		
+		stage('Unit-test') {
+            steps {
+                echo "Running Junit tests!! "; 
+                 bat 'Unit.bat'
+            }
+        }
+		
+		stage('Quality-Gate') {
+            steps {
+                echo "Verifying Quality Gates !!"; 
+                bat 'Quality.bat'
+            }
+        } 
+        
+        stage('Deploy') {
+            steps {
+                echo "Deploying the environments for more tests !!"; 
+                bat 'Deploy.bat'
+            }
+        } 
+		
+    }
+	post{
+	     always{
+		        echo 'This will always run'
+		   }
+		   
+		   success{
+		        echo 'This will always run only if successful'
+		   }
+		   
+		   failure{
+		        echo 'This will  run only if failed'
+		   }
+		   
+		   unstable{
+		        echo 'This will run only if the run was masked as unstable'
+		   }
+		   
+		    changed{
+		        echo 'This will run only if the state of the pipeline has changed'
+				
+				echo 'For Example  if the  pipeline was previously failing but is now successful'
+		   } 	  
+		}
+	}
