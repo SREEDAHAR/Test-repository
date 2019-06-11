@@ -1,0 +1,71 @@
+What is Micro Services?
+ Independent deployable, Small Component
+with out effecting other components.
+
+Each one is an individual application
+take things life is fast as much as more.
+
+Micro Services Challenges:
+
+1) Bounded Context
+  MicroService1  --> MicroService2 -->MicroService3-->MicroService4 -->MicroService5 -->MicroService6
+
+2)Configurarion ManageMent
+    Multiple instances with different environments.
+	
+3) Dynamic Scale up and SCALE Down.
+ Naming Server (EUREKHA)
+ Ribbon (Client Side Load Balancing)
+ Feign (Easier Rest Clients)
+ 
+  Dynamic Load balancer with all instances of those services are able to stop and start with active instances.
+ we also need to monitor those services, All these kind of things need to be auotmated
+
+4) Pack of Cards  
+   MicroService1  --> MicroService2 -->MicroService3-->MicroService4 -->MicroService5 -->MicroService6
+5) Visibilty and Monitoring
+    Zipkin Distributed Tracing
+	Netflix API Gateway
+	
+
+Advantages of MicroServices
+
+1) New Technology & Process Adoption
+  Enable to adopt the new technologies adopt easily. 
+MicroService1  --> MicroService2 -->MicroService3-->MicroService4 -->MicroService5 -->MicroService6 
+2) Dynamic Scaling
+3) Faster Release Cycles.
+
+MicroServices :- Introduction to Spring Cloud
+----------------------------------------------
+https://spring.io/projects/spring-cloud
+
+https://www.youtube.com/watch?v=Lr96QgqylIU&list=PLBBog2r6uMCQK3KnO2iVs66OnP-V8GiTM&index=5
+
+Netflix API Gateway
+Fault Tolerence (Hystrix)
+Zuul API Gateway
+
+Microservices - Differences between Microservices and SOA
+----------------------------------------------------------
+MicroServices have similar goals of SOA : Create Services around your buisness logic.
+   MicroService1  --> MicroService2 -->MicroService3-->MicroService4 -->MicroService5 -->MicroService6
+
+Independent deployable, Small Component with out effecting other components.
+
+SOA (Enterprise Service Bus)
+https://www.youtube.com/watch?v=Ng79aeXukDE&list=PLBBog2r6uMCQK3KnO2iVs66OnP-V8GiTM&index=6
+
+Microservices - First Steps from Monolith to Microservices
+---------------------------------------------------------
+https://www.youtube.com/watch?v=d_wVZ6sgVbs&list=PLBBog2r6uMCQK3KnO2iVs66OnP-V8GiTM&index=7
+
+
+
+
+
+
+
+ 
+
+
